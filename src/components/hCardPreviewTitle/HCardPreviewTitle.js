@@ -1,19 +1,19 @@
 import React, {PropTypes} from 'react';
 import {Grid, Row, Col} from 'react-bootstrap';
 
-const HCardBuilderSubTitle = ({title}) => {
+const HCardPreviewTitle = ({title}) => {
 
     return (
         <div>
             <Col sm={12}>
-                <h5>{title.toUpperCase()}</h5>
+                <h1>{title}</h1>
             </Col>
         </div>
     );
 };
 
-HCardBuilderSubTitle.prototypes = {
+HCardPreviewTitle.prototypes = {
     title: PropTypes.string.isRequired
 };
 
-export default HCardBuilderSubTitle;
+export default HCardPreviewTitle;

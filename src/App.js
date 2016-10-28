@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {Grid, Row, Col} from 'react-bootstrap';
 
-import HCardBuilder from './components/HCardBuilder';
-import HCardPreview from './components/HCardPreview';
+import HCardBuilder from './components/hCardBuilder/HCardBuilder';
+import HCardPreview from './components/hCardPreview/HCardPreview';
 import './App.css';
 
 class App extends Component {
@@ -41,20 +41,16 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <Grid>
-                    <Row>
-                        <Col xs={12} sm={6} md={6}>
-                            <HCardBuilder
-                                inputChange={(detailType, id, value) => this.updateInput(detailType, id, value)}
-                                {...this.state}
-                            />
-                        </Col>
+                <Col className="hCardBuilderContainer" xs={12} sm={6} md={6}>
+                    <HCardBuilder
+                        inputChange={(detailType, id, value) => this.updateInput(detailType, id, value)}
+                        {...this.state}
+                    />
+                </Col>
 
-                        <Col xs={12} sm={6} md={6}>
-                            <HCardPreview {...this.state}/>
-                        </Col>
-                    </Row>
-                </Grid>
+                <Col className='hCardPreviewContainer' xs={12} sm={6} md={6}>
+                    <HCardPreview {...this.state}/>
+                </Col>
             </div>
         );
     }

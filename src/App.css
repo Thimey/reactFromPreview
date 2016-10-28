@@ -1,0 +1,14 @@
+.hCardBuilderContainer {
+    background-color: white;
+    padding-left: 3%;
+    padding-right: 3%;
+    height: 100vh;
+    vertical-align: middle;
+}
+
+.hCardPreviewContainer {
+    background-color: cadetblue;
+    padding-right: 0;
+    padding-left: 5%;
+    height: 100vh;
+}

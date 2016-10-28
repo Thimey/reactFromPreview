@@ -1,0 +1,11 @@
+.hCardBuilderButtonContainer {
+    margin-top: 5%;
+    text-align: center;
+}
+
+.hCardBuilderButton {
+    width: 50%;
+    background-color: deepskyblue;
+    color: white;
+    height: 50px;
+}

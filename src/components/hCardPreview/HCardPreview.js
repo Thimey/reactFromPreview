@@ -1,9 +1,12 @@
 import React, {PropTypes} from 'react';
-import HCardPreviewField from './HCardPreviewField';
+import HCardPreviewField from '../hCardPreviewField/HCardPreviewField';
+import HCardPreviewTitle from '../hCardPreviewTitle/HCardPreviewTitle';
 
 const HCardPreview = ({personalDetails, addressDetails}) => {
     return (
         <div>
+
+            <HCardPreviewTitle title={`${personalDetails.givenName.value} ${personalDetails.surname.value}`}/>
 
             <HCardPreviewField
                 tag="email"
