@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-import {Grid, Row, Col} from 'react-bootstrap';
+import {Col} from 'react-bootstrap';
 import './hCardBuilderSubTitle.css';
 
 const HCardBuilderSubTitle = ({title}) => (

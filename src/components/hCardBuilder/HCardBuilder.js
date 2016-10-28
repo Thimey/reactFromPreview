@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import HCardInput from '../hCardInput/HCardInput';
 import HCardBuilderSubTitle from '../hCardBuilderSubTitle/HCardBuilderSubTitle';
 import HCardBuilderMainTitle from '../hCardBuilderMainTitle/HCardBuilderMainTitle';
@@ -8,6 +8,7 @@ import './hCardBuilder.css';
 
 const HCardBuilder = ({personalDetails, addressDetails, inputChange}) => {
     return (
+        <div className="centerElement">
             <form className="hCardBuilderForm">
                 <HCardBuilderMainTitle title={"hCard Builder"}/>
 
@@ -16,7 +17,6 @@ const HCardBuilder = ({personalDetails, addressDetails, inputChange}) => {
                 {Object.keys(personalDetails).map((key) =>
                     <HCardInput
                         key={key}
-                        type="text"
                         inputChange={inputChange}
                         id={key}
                         detailType="personalDetails"
@@ -29,7 +29,6 @@ const HCardBuilder = ({personalDetails, addressDetails, inputChange}) => {
                 {Object.keys(addressDetails).map((key) =>
                     <HCardInput
                         key={key}
-                        type="text"
                         inputChange={inputChange}
                         id={key}
                         detailType="addressDetails"
@@ -39,7 +38,15 @@ const HCardBuilder = ({personalDetails, addressDetails, inputChange}) => {
 
                 <HCardBuilderButton label={"Create hCard"}/>
             </form>
+        </div>
     )
 };
+
+HCardBuilder.proptypes = {
+    personalDetails: PropTypes.object.isRequired,
+    addressDetails: PropTypes.object.isRequired,
+    inputChange: PropTypes.func.isRequired
+};
+
 
 export default HCardBuilder;

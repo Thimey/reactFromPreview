@@ -1,0 +1,16 @@
+.hCardPreviewTitleContainer {
+    background-color: darkslateblue;
+    height: 20%;
+}
+
+.hCardPreviewTitle {
+    color: white;
+    text-transform: capitalize;
+    margin: 0;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+
+}

@@ -1,0 +1,24 @@
+.hCardPreviewField {
+    border-bottom: 1px solid grey;
+    padding-bottom: 4px;
+    padding-left: 0;
+    margin: 2px 8px 2px 0px;
+}
+
+.hCardPreviewFieldLabel {
+    color: dodgerblue;
+}
+
+.hCardPreviewFieldContainer {
+    height: 20%;
+}
+
+.hCardPreviewFieldTag {
+    width: 100px;
+    display: inline-block;
+}
+
+.hCardPreviewFieldValue {
+    font-size: 1.2em;
+    display: inline-block;
+}

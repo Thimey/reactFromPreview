@@ -1,16 +1,9 @@
 import React, {PropTypes} from 'react';
-import {Grid, Row, Col} from 'react-bootstrap';
+import './hCardPreviewTitle.css'
 
-const HCardPreviewTitle = ({title}) => {
-
-    return (
-        <div>
-            <Col sm={12}>
-                <h1>{title}</h1>
-            </Col>
-        </div>
-    );
-};
+const HCardPreviewTitle = ({title}) => (
+    <h1 className="hCardPreviewTitle">{title}</h1>
+);
 
 HCardPreviewTitle.prototypes = {
     title: PropTypes.string.isRequired

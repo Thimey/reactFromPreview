@@ -1,0 +1,30 @@
+.hCardPreviewCard {
+    height: 50%;
+    width: 90%;
+    max-width: 520px;
+    max-height: 450px;
+}
+
+.hCardPreviewHeadingContainer {
+    background-color: none;
+    height: 10%;
+}
+
+.hCardPreviewTitleContainer {
+    background-color: darkslateblue;
+    height: 20%;
+}
+
+.hCardPreviewContent {
+    height: 70%;
+    padding-top: 5%;
+}
+
+.hCardPreviewItemRow {
+    padding-left: 25px;
+}
+
+.hCardPreviewContent {
+    background-color: white;
+    overflow: auto;
+}

@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import {Grid, Row, Col} from 'react-bootstrap';
-
+import {Col} from 'react-bootstrap';
 import HCardBuilder from './components/hCardBuilder/HCardBuilder';
 import HCardPreview from './components/hCardPreview/HCardPreview';
 import './App.css';
@@ -8,21 +7,20 @@ import './App.css';
 class App extends Component {
     constructor(props) {
         super(props);
-        // TODO: Move this initial state to a separate file
         this.state = {
             personalDetails: {
-                givenName: {value: '', label: 'given name'},
-                surname: {value: '', label: 'surname'},
-                email: {value: '', label: 'email'},
-                phone: {value: '', label: 'phone'}
+                givenName: {value: '', label: 'given name', type: 'text'},
+                surname: {value: '', label: 'surname', type: 'text'},
+                email: {value: '', label: 'email', type: 'email'},
+                phone: {value: '', label: 'phone', type: 'tel'}
             },
             addressDetails: {
-                nameNumber: {value: '', label: 'house name or #'},
-                street: {value: '', label: 'street'},
-                suburb: {value: '', label: 'suburb'},
-                state: {value: '', label: 'state'},
-                postcode: {value: '', label: 'postcode'},
-                country: {value: '', label: 'country'}
+                nameNumber: {value: '', label: 'house name or #', type: 'text'},
+                street: {value: '', label: 'street', type: 'text'},
+                suburb: {value: '', label: 'suburb', type: 'text'},
+                state: {value: '', label: 'state', type: 'text'},
+                postcode: {value: '', label: 'postcode', type: 'text'},
+                country: {value: '', label: 'country', type: 'text'}
             }
         };
     }
@@ -34,21 +32,19 @@ class App extends Component {
                 [id]: {...this.state[detailType][id], value: value}
             }
         });
-        // TODO: Remove logs
-        console.log('state', this.state);
-
     }
+
     render() {
         return (
             <div className="App">
-                <Col className="hCardBuilderContainer" xs={12} sm={6} md={6}>
+                <Col className="hCardBuilderContainer" xs={12} md={6}>
                     <HCardBuilder
                         inputChange={(detailType, id, value) => this.updateInput(detailType, id, value)}
                         {...this.state}
                     />
                 </Col>
 
-                <Col className='hCardPreviewContainer' xs={12} sm={6} md={6}>
+                <Col className='hCardPreviewContainer' xs={12} md={6}>
                     <HCardPreview {...this.state}/>
                 </Col>
             </div>
